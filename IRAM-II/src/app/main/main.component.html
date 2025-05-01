@@ -1,0 +1,44 @@
+<header class="navbar">
+    <div class="navbar-container">
+      <img class="logo" src="assets/IramLogo.png">
+      <div class="navbar-brand">
+        <a routerLink="/">IRAM II</a>
+      </div>
+      
+      <nav class="navbar-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a routerLink="/home" class="nav-link">HOME</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link" style="cursor: pointer;">ABOUT <i class='bx bx-chevron-down'></i></a>
+            <div class="dropdown-content">
+              <a routerLink="/about/history">History</a>
+              <a routerLink="/about/vision-and-mission">Vision, Mission and Core Values</a>
+              <a routerLink="/about/academic-program">Academic Programs</a>
+              <a routerLink="/about/organizational-chart">Organizational Chart</a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a routerLink="/AcadLearn" class="nav-link">ACADEMIC & LEARNINGS</a>
+          </li>
+          
+          <li class="nav-item">
+            <a routerLink="/NewsNUpdates" class="nav-link">NEWS & UPDATES</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a routerLink="/Community" class="nav-link">COMMUNITY</a>
+          </li>
+          
+          <li class="nav-item">
+            <a routerLink="/ContactUs" class="nav-link">CONTACT US</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <router-outlet></router-outlet>

@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary-dark-red: #5C1924;
+    --primary-maroon: #780001;
+    --primary-light-brown: #9B5449E0;
+    --primary-light-pink: #FFEEEE;
+
+    --secondary-dark-brown: #411900;
+    --secondary-brown-gray: #8D7666;
+    --secondary-biege: #AED6F1;
+
+    --accent-orange: #FE823A;
+    --accent-light-orange: #FFC49C;
+    --accent-light-biege: #F6EFE5;
+
+    --neutral-dark-grey: #2C3E50;
+    --neutral-grey: #7F8C8D;
+    --neutral-light-one: #ECF0F1;
+    --neutral-white: #FFFFFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body { 
+    margin: 0; 
+    background-color: var(--accent-light-biege);
+    }
+
+
