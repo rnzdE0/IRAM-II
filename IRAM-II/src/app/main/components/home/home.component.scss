@@ -42,7 +42,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-  
+
 
   h1 {
     color: var(--primary-dark-red);
@@ -110,3 +110,45 @@
   }
 
 
+  .schedule-card {
+    background-color: var(--primary-dark-red); // maroon background
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    h2 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th, td {
+        padding: 12px;
+        border: 1px solid #691c27; // darker maroon border
+        text-align: center;
+      }
+
+      thead {
+        background-color: #F6EFE5; // soft beige
+
+        th {
+          font-weight: bold;
+          color: #2b0000; // dark text
+        }
+      }
+
+      tbody {
+        background-color: #F6EFE5; // match body cells
+
+        td {
+          height: 50px;
+          color: #2b0000;
+        }
+      }
+    }
+  }
