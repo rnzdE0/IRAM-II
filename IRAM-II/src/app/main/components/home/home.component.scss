@@ -32,10 +32,22 @@
   }
 }
 
-.nsa h1{
+.nsa {
   color: var(--primary-dark-red);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;         // Stack h1 and square vertically
+  align-items: center;            // Center both items horizontally
   margin-top: 45px;
+
+  h1 {
+    color: var(--primary-dark-red);
+    margin-bottom: 20px;
+  }
+
+  .square {
+    width: 86%;
+    height: 350px;
+    background-color: var(--primary-dark-red);
+  }
 }
+
