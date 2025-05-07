@@ -13,3 +13,22 @@
         margin-left: 245px;
     }
 }
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 86%;
+    height: 350px;
+  }
+}
+
+.nsa h1{
+  color: var(--primary-dark-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
