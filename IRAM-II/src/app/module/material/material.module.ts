@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 const MatModules = [
   CommonModule,
@@ -34,7 +35,8 @@ const MatModules = [
   MatDatepickerModule,
   MatNativeDateModule,  
   MatInputModule,  
-  MatProgressSpinnerModule     
+  MatProgressSpinnerModule,
+  SlickCarouselModule
 ];
 
 @NgModule({

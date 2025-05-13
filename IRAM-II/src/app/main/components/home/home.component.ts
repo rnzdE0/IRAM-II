@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MaterialModule } from '../../../module/material/material.module';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [MaterialModule, SlickCarouselModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -27,6 +30,25 @@ export class HomeComponent implements OnInit{
     
     this.philippineTime = new Intl.DateTimeFormat('en-PH', options).format(now);
   }
+
+  slides = [
+    { img: 'assets/image/1.png' },
+    { img: 'assets/image/2.png' },
+    { img: 'assets/image/3.png' },
+    { img: 'assets/image/4.png' },
+    { img: 'assets/image/5.png' },
+    { img: 'assets/image/6.jpg' },
+  ];
+
+
+  slideConfig = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000
+  };
 }
 
 
