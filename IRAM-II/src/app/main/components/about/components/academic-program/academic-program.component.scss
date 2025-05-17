@@ -61,3 +61,131 @@
         z-index: 2;
       }
 }
+
+.contents {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  height: 100vh;            
+}
+
+.wrapper {
+  text-align: center;
+  color: white;
+
+  .head {
+    color: black;
+    margin-bottom: 30px;
+  }
+
+  .elem {
+    background-color: var(--primary-maroon);
+    width: 997px;
+    height: 140px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kinder {
+    background-color: var(--primary-light-brown);
+    width: 997px;
+    height: 140px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .junior {
+    background-color: var(--secondary-dark-brown);
+    width: 997px;
+    height: 140px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .high {
+    background-color: var(--secondary-brown-gray);
+    width: 997px;
+    height: 140px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .last {
+    background-color: var(--secondary-brown-gray);
+    opacity: 78%;
+    width: 997px;
+    height: 140px;
+    margin-bottom: 30px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25%;
+  }
+}
+
+.content {
+  margin: 30px;
+  font-family: 'poppins', sans-serif;
+
+  h1 {
+    font-size: 50px;
+  }
+
+  p{
+    margin-left: 30px;
+    margin-top: 40px;
+    text-indent: 5%;
+    font-size: 27px;
+    color: var(--secondary-dark-brown);
+  }
+}
+
+
+.radio {
+
+  margin-bottom: -50px;
+
+  h1 {
+    margin-left: 40px;
+    margin-top: -20px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .links {
+    margin-top: 30px;
+    font-style: italic;
+    column-gap: 30px;
+    display: flex;
+    margin-left: 70px;
+  }
+
+
+}
+
+.links label {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: var(--primary-light-brown);
+  font-size: 20px;
+}
+
+.links label.active {
+  color: var(--secondary-dark-brown);
+  font-weight: bold;
+}

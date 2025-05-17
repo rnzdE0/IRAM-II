@@ -56,11 +56,13 @@
   justify-content: center; 
   align-items: center;
   height: 100vh;
+  margin-top: -10%;
+  margin-bottom: -16%;
 }
 
 .carousel {
   width: 80%; 
-  max-width: 1200px;
+  max-width: 2500px;
 
   .slide {
     display: flex;

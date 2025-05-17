@@ -63,19 +63,40 @@
 }
 
 .VM {
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 5%;
-    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    column-gap: 15%;
 
     h1{
-        color: var(--primary-dark-green);
         font-size: 40px;
     }
 
     p{
-        margin-left: 63px;
         font-weight: 500;
         margin-top: 30px;
         margin-bottom: 170px;
+        text-align: center;
+    }
+
+    .card {
+      background-color: white;
+      width: 661px;
+      height: 518px;
+      border-radius: 15px;
+
+      h1 {
+        text-align: center;
+        margin-top: 30px;
+        color: var(--secondary-dark-brown);
+      }
     }
 }
+
+h1 {
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      font-size: 37px;
+      color: var(--primary-dark-red);
+    }

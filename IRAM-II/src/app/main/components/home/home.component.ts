@@ -1,20 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from '../../../module/material/material.module';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ReadmeComponent } from './readme/readme.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [MaterialModule, SlickCarouselModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+
+  constructor(
+    private dialog: MatDialog
+  ) {}
+
   philippineTime: string = '';
   
   ngOnInit(): void {
     this.updatePhilippineTime();
-    // Update the time every second
     setInterval(() => this.updatePhilippineTime(), 1000);
   }
   
@@ -30,6 +36,15 @@ export class HomeComponent implements OnInit{
     
     this.philippineTime = new Intl.DateTimeFormat('en-PH', options).format(now);
   }
+
+  readme() {
+    console.log('Opening dialog...');
+      this.dialog.open(ReadmeComponent, {
+        maxWidth: '180vh',
+      });
+  }
+
+
 
   slides = [
     { img: 'assets/image/1.png' },

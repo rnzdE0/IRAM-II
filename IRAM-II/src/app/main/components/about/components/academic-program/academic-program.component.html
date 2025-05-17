@@ -14,3 +14,86 @@
         <div class="text">Academic Programs</div>
     </div>
 </div>
+
+<div class="radio-content">
+
+    <div class="contents" *ngIf="selectedLevel === 'basicEd'">
+        <div class="wrapper">
+
+            <h1 class="head">Basic Education Curriculum</h1>
+
+            <div class="elem">
+                <h1>Elementary</h1>
+            </div>
+            <div class="kinder">
+                <h1>Kindergarten</h1>
+                <p>Grade 1 - 6</p>
+            </div>
+            <div class="junior">
+                <h1>Junior High School</h1>
+            </div>
+            <div class="high">
+                <h1>GRADE 7-10</h1>
+            </div>
+
+            <div class="last">
+                <div class="seven">
+                    <h1>GRADE 7-8</h1>
+                    <p>(Exploratory TLE)</p>
+                </div>
+                <div class="ten">
+                    <h1>GRADE 9-10</h1>
+                    <p>(Specialized TLE)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="elem" *ngIf="selectedLevel === 'kinder'">
+        <div class="content">
+            <h1>Kindergarten</h1>
+
+            <p>Republic Act 10157, or “The Kindergarten Education Law” made Kindergarten the compulsory and mandatory entry stage to basic education. Section 2 of this Act provides that all five (5)-year old children shall be given equal opportunities for Kindergarten Education to effectively promote their physical, social, emotional and intellectual development, including values formation so they will be ready for school. This was so since the Department of Education (DepEd) believes that Kindergarten is the transition period from informal to formal literacy (Grades 1-12) considering that age five (5) is within the critical years where positive experiences must be nurtured to ascertain school readiness.</p>
+                <br>
+            <p>  Various researches support that this is the period of greatest growth and development, when the brain develops most rapidly and almost at its fullest. It is also the stage when self- esteem, vision of the world and moral foundations are established. Teachers/parents/caregivers/adults should therefore be guided to facilitate explorations of our young learners in an engaging and creative curriculum that is developmentally appropriate which immerse them in meaningful experiences. Provision of varied play-based activities leads them to becoming emergent literates and, helps them to naturally acquire the competencies to develop holistically. They are able to understand the world by exploring their environment as they are encouraged to create and discover, that eventually leads them to becoming willing risk takers and ready to tackle formal school works.</p>
+                <br>
+        </div>
+    </div>
+
+    <div class="elem" *ngIf="selectedLevel === 'grade1'">
+      <h1>Special</h1>
+    </div>
+
+    <div class="elem" *ngIf="selectedLevel === 'SpecialProgram'">
+      <h1>Special</h1>
+    </div>
+
+</div>
+
+<div class="radio">
+
+    <h1>CURRICULUM GUIDES</h1>
+
+    <div class="links">
+
+        <label [class.active]="selectedLevel === 'basicEd'">
+            <input type="radio" name="level" [value]="'basicEd'" [(ngModel)]="selectedLevel" (ngModelChange)="onLevelChange($event)"> Basic Education Curriculum
+        </label>
+
+        <label [class.active]="selectedLevel === 'kinder'">
+            <input type="radio" name="level" [value]="'kinder'" [(ngModel)]="selectedLevel" (ngModelChange)="onLevelChange($event)"> Kindergarten
+        </label>
+
+        <label [class.active]="selectedLevel === 'grade1'">
+            <input type="radio" name="level" [value]="'grade1'" [(ngModel)]="selectedLevel" (ngModelChange)="onLevelChange($event)"> Grade 1 - 10
+        </label>
+
+        <label [class.active]="selectedLevel === 'SpecialProgram'">
+            <input type="radio" name="level" [value]="'SpecialProgram'" [(ngModel)]="selectedLevel" (ngModelChange)="onLevelChange($event)"> Special Programs
+        </label>
+    </div>
+
+
+</div>
+
+
