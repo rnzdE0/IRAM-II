@@ -3,6 +3,7 @@ import { MaterialModule } from '../../../module/material/material.module';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ReadmeComponent } from './readme/readme.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ import { ReadmeComponent } from './readme/readme.component';
 export class HomeComponent implements OnInit{
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private router: Router
   ) {}
 
   philippineTime: string = '';
@@ -42,6 +44,10 @@ export class HomeComponent implements OnInit{
       this.dialog.open(ReadmeComponent, {
         maxWidth: '180vh',
       });
+  }
+
+  View() {
+     this.router.navigate(['/NewsNUpdates']);
   }
 
 
