@@ -270,10 +270,15 @@
   }
 }
 
-h1 {
+.sm {
+  color: var(--primary-dark-red);
+  justify-self: center;
+  h1 {
+    color: var(--primary-dark-red);
       font-family: "Poppins", sans-serif;
       text-align: center;
       margin-top: 150px;
       font-size: 37px;
-      color: var(--primary-dark-red);
+      justify-self: center;
     }
+  }
