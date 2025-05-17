@@ -10,4 +10,5 @@ import { FooterComponent } from "./footer/footer.component";
 })
 export class AppComponent {
   title = 'IRAM-II';
+  tite = 'iram-admin-login';
 }

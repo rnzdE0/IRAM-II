@@ -2,6 +2,13 @@ import { Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 
 export const routes: Routes = [
+    //for admin//
+    {
+      path: 'admin',
+      loadChildren: () =>
+        import('./admin/admin.module').then(m => m.AdminModule)
+    },
+
     { 
         path: '', 
         component: MainComponent,
