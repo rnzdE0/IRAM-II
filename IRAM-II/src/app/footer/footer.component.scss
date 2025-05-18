@@ -1,38 +1,102 @@
-
 .extra {
-    width: 100%;
-    background-color: var(--primary-maroon);
-    opacity: 70%;
-    height: 315px;
-    justify-items: center;
-    color: white;
-    margin-top: 100px;
-  
-    h1 {
-      padding-top: 78px;
-      margin-bottom: 10px;
-      font-weight: 600;
-      font-size: 45px;
-    }
-  
-    p {
-      font-weight: 400;
-      font-size: 17px;
-    }
-    
+  width: 100%;
+  background-color: var(--primary-maroon);
+  opacity: 70%;
+  color: white;
+  padding: 40px 0;
+
+  .contact-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    gap: 40px;
+    flex-wrap: wrap;
   }
-  
+
+  .contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.4);
+      color: white;
+      font-size: 14px;
+
+      &::placeholder {
+        color: #eee;
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    button {
+      width: 80px;
+      padding: 10px;
+      background-color: #4b1212;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+
+  .contact-info {
+    flex: 1;
+    max-width: 400px;
+
+    h3 {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+
+      .icon {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      strong {
+        font-size: 14px;
+      }
+
+      div {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
   .school-footer {
       background-color: var(--primary-dark-red);
       padding: 40px 0 20px;
       font-family: 'Arial', sans-serif;
       color: #333;
-  
+
       .dots{
           font-size: 55px;
           color: var(--neutral-white);
       }
-  
+
       .footer-container {
         max-width: 1600px;
         margin: 0 auto;
@@ -41,62 +105,62 @@
         justify-content: space-between;
         padding: 0 20px;
       }
-  
+
       .footer-section {
         width: 23%;
         min-width: 200px;
         margin-bottom: 30px;
-  
+
         &.school-info {
           width: 30%;
         }
       }
-  
+
       .footer-title {
         font-size: 24px;
         margin-bottom: 15px;
         color: var(--neutral-white);
         font-weight: 600;
       }
-  
+
       .footer-subtitle {
         font-size: 24px;
         margin-bottom: 15px;
         color: var(--neutral-white);
         font-weight: 600;
       }
-  
+
       .footer-description {
         color: var(--neutral-grey);
         line-height: 1.5;
         font-size: 15px;
         font-weight: 400;
       }
-  
+
       .footer-links,
       .footer-contacts {
         list-style: none;
         padding: 0;
         margin: 0;
-  
+
         li {
           margin-bottom: 8px;
           font-size: 16px;
           color: var(--neutral-grey);
           font-weight: 400;
-  
+
           a {
             color: var(--neutral-grey);
             text-decoration: none;
             transition: color 0.3s;
-  
+
             &:hover {
               color: var(--primary-light-green);
             }
           }
         }
       }
-  
+
       .footer-copyright {
         max-width: 1200px;
         margin: -10px auto 0;
@@ -106,18 +170,17 @@
         font-size: 14px;
         font-weight: 400;
       }
-  
+
       // Responsive adjustments
       @media (max-width: 768px) {
         .footer-section {
           width: 48% !important;
         }
       }
-  
+
       @media (max-width: 480px) {
         .footer-section {
           width: 100% !important;
         }
       }
     }
-  
