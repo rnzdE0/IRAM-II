@@ -102,15 +102,14 @@
     position: relative;
 
     &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      height: 20px;
-      border-top: 2px solid #800000;
-      width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 20px;
+    border-top: 4px solid #800000; // increased from 2px to 4px
+    width: 90%;
     }
 
     &.principal::before {
@@ -118,25 +117,29 @@
     }
   }
 
-  .connector.vertical {
-    width: 2px;
-    height: 30px;
-    background-color: #800000;
-    margin-bottom: 1rem;
-  }
+  // .connector.vertical {
+  //   width: 4px; // was 2px
+  //   height: 60px; // optional: slightly taller line
+  //   background-color: #800000;
+  // }
 
   .person {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 120px;
-    position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 270px;
+      position: relative;
+      padding: 0.5rem;
+      border: 2px solid #800000; // maroon border
+      border-radius: 8px;         // optional: rounded edges
+      background-color: #fff;     // optional: white background for contrast
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // optional: subtle shadow
 
     .avatar {
       width: 80px;
       height: 80px;
-      background-color: #ccc;
-      border-radius: 50%;
+      object-fit: cover;
+      border-radius: 8px;
       margin-bottom: 0.5rem;
     }
 
