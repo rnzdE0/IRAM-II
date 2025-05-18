@@ -18,3 +18,39 @@
         <div class="text">Community</div>
     </div>
 </div>
+
+<div class="selection">
+    <div class="radio">
+
+        <label [class.active]="selectedCategory === 'parent'">
+            <input type="radio" name="level" [value]="'parent'" [(ngModel)]="selectedCategory" (ngModelChange)="onLevelChange($event)"> Parent & Community Engagement
+        </label>
+
+        <label [class.active]="selectedCategory === 'support'">
+            <input type="radio" name="level" [value]="'support'" [(ngModel)]="selectedCategory" (ngModelChange)="onLevelChange($event)"> Support and Partnership
+        </label>
+
+    </div>
+</div>
+
+<div class="content">
+
+    <div class="card" *ngIf="selectedCategory === 'parent'">
+
+         <div class="sample">
+            <img src="assets/NoContent/none.png" alt="">
+            <p>No Content</p>
+        </div>
+
+    </div>
+
+    <div class="card" *ngIf="selectedCategory === 'support'">
+
+        <div class="sample">
+            <img src="assets/NoContent/none.png" alt="">
+            <p>No Content</p>
+        </div>
+
+    </div>
+
+</div>

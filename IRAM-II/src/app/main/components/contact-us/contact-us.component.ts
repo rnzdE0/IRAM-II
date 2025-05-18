@@ -48,27 +48,24 @@ export class ContactUsComponent implements OnInit {
     });
   }
 
-  updatePhilippineTime() {
-    // Philippine time is GMT+8
-    const now = new Date();
-    const philippineTime = new Date(now.getTime() + (8 * 60 * 60 * 1000));
-    
-    let hours = philippineTime.getUTCHours();
-    const minutes = philippineTime.getUTCMinutes();
-    const seconds = philippineTime.getUTCSeconds();
-    
-    // Convert to 12-hour format
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    
-    // Format the time as HH:MM:SS AM/PM
-    this.philippineTime = 
-      hours.toString().padStart(2, '0') + ':' + 
-      minutes.toString().padStart(2, '0') + ':' + 
-      seconds.toString().padStart(2, '0') + ' ' + 
-      ampm;
-  }
+  updatePhilippineTime(): void {
+  const now = new Date();
+  const options: Intl.DateTimeFormatOptions = {
+    timeZone: 'Asia/Manila',
+    weekday: 'long',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  };
+
+  const parts = new Intl.DateTimeFormat('en-PH', options).formatToParts(now);
+
+  this.philippineTime = parts.map(part => part.value).join('');
+
+  this.philippineTime = this.philippineTime.replace(parts.find(p => p.type === 'weekday')?.value || '', 
+    (parts.find(p => p.type === 'weekday')?.value || '') + ',');
+}
+
 
   // Button actions
   callNow() {

@@ -20,7 +20,7 @@
 
 .timezone-container {
   display: flex;
-  margin-left: 80%;
+  margin-left: 77%;
   margin-top: -85px;
 }
 
@@ -67,3 +67,92 @@
         z-index: 2;
       }
 }
+
+.selection {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.radio {
+  display: flex;
+  justify-content: center;
+  gap: 30%;
+  background-color: #6c2b30;
+  margin-top: 30px;
+  width: 90%;
+  padding: 5px;
+
+  input[type="radio"] {
+    display: none; 
+  }
+
+  label {
+    position: relative;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: #6c2b30;
+    margin: 0;
+    border: 1px solid #6c2b30;
+  }
+
+  label::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+  }
+
+  label:hover::after {
+    width: 100%;
+  }
+
+  label.active::after {
+    width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+  .card {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: -20px;
+    width: 90%;
+    height: 1000px;
+    margin-bottom: 30px;
+
+    .sample {
+
+      margin-block: auto;
+
+        img {
+        font-size: 30px;
+        height: 98px;
+      }
+    }
+  }
+
+  .card:first-child {
+      border-bottom-left-radius: 8px;
+    }
+
+  .card:last-child {
+    border-bottom-right-radius: 8px;
+  }
+
+}
+
+
