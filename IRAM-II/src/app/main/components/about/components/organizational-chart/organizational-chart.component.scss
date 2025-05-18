@@ -62,7 +62,102 @@
       }
 }
 
-.img-chart {
-  justify-self: center;
-  margin-top: 100px;
+
+// org chart section
+
+.org-chart {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  .school-year {
+    background-color: #800000;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+
+  .org-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #5c2c2c;
+    margin-bottom: 2rem;
+  }
+
+  .chart-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .level {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 20px;
+      border-top: 2px solid #800000;
+      width: 90%;
+    }
+
+    &.principal::before {
+      display: none;
+    }
+  }
+
+  .connector.vertical {
+    width: 2px;
+    height: 30px;
+    background-color: #800000;
+    margin-bottom: 1rem;
+  }
+
+  .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    position: relative;
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+
+    .details {
+      background-color: #800000;
+      color: white;
+      padding: 0.4rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      line-height: 1.1;
+      font-weight: 500;
+
+      strong {
+        display: block;
+        font-size: 0.75rem;
+      }
+
+      p {
+        margin: 2px 0 0;
+        font-size: 0.65rem;
+      }
+    }
+  }
 }
