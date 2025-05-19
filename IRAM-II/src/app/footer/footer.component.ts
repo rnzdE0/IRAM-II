@@ -1,12 +1,27 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-footer',
-  imports: [RouterLink, RouterOutlet],
+  standalone: true,
+  imports: [],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  // form = {
+  //   name: '',
+  //   email: '',
+  //   subject: '',
+  //   message: ''
+  // };
 
+  // constructor(private http: HttpClient) {}
+
+  // sendEmail() {
+  //   this.http.post('https://your-backend-domain.com/api/send-email', this.form).subscribe({
+  //     next: () => alert('Email sent successfully!'),
+  //     error: () => alert('Failed to send email.')
+  //   });
+  // }
 }
