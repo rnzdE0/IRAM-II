@@ -1,103 +1,258 @@
-
-.school {
-
-    justify-items: center;
-
-    img {
-        width: auto;
-        height: 101px;
-        margin-right: 900px;
-        margin-top: 28px;
-    }
-
-    .info {
-        margin-top: -5%;
-        font-weight: 500;
-        justify-items: center;
-        color: var(--secondary-dark-brown);
-    }
+/* Variables for consistent colors */
+:root {
+  --primary-dark-red: #8B0000;
+  --primary-light-brown: rgba(196, 164, 132, 0.7);
+  --secondary-dark-brown: #5D4037;
+  --text-color: #333;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --card-border-radius: 15px;
 }
 
-.banner {
-    max-width: 120%;
-    justify-items: center;
-    margin-top: -1%;
-    padding-top: 65px;
-    margin-left: -66px;
+/* School header styling */
+.school {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+}
 
-    .image-container {
-        position: relative;
-        width: 100%;
-        height: 269px;
-        overflow: hidden;
-      }
-      
-      .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      
-      .image-container .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--primary-light-brown);
-        z-index: 1;
-      }
-      
-      .image-container .text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-        z-index: 2;
-      }
+.school img {
+  width: auto;
+  height: 101px;
+}
+
+.school .info {
+  margin-left: 20px;
+  color: var(--secondary-dark-brown);
+}
+
+.school .info p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.school .info h1 {
+  margin: 5px 0 0 0;
+  font-size: 24px;
+}
+
+/* Banner styling */
+.banner {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.banner .image-container {
+  position: relative;
+  width: 100%;
+  height: 269px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-light-brown);
+  opacity: 0.7;
+}
+
+.banner .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  width: 90%;
+}
+
+/* Vision and Mission section */
+.VM-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .VM {
-    margin-top: 10%;
-    margin-bottom: 5%;
-    display: flex;
-    justify-content: center;
-    column-gap: 15%;
-
-    h1{
-        font-size: 40px;
-    }
-
-    p{
-        font-weight: 500;
-        margin-top: 30px;
-        margin-bottom: 170px;
-        text-align: center;
-    }
-
-    .card {
-      background-color: white;
-      width: 661px;
-      height: 518px;
-      border-radius: 15px;
-
-      h1 {
-        text-align: center;
-        margin-top: 30px;
-        color: var(--secondary-dark-brown);
-      }
-    }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 50px 0;
 }
 
-h1 {
-      font-family: "Poppins", sans-serif;
-      text-align: center;
-      font-size: 37px;
-      color: var(--primary-dark-red);
-      margin-bottom: 94px;
-    }
+.VM .card {
+  background-color: white;
+  width: 600px;
+  min-height: 450px;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 300px;
+}
+
+.VM .card:hover {
+  transform: translateY(-5px);
+}
+
+.VM .card h1 {
+  text-align: center;
+  color: var(--secondary-dark-brown);
+  margin-bottom: 30px;
+  font-size: 32px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.VM .card h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-dark-red);
+}
+
+.VM .card p {
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-color);
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* Core Values styling */
+.core-values-container {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+}
+
+.core-values {
+  background-color: white;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 30px;
+  text-align: center;
+}
+
+.core-values h1 {
+  color: var(--secondary-dark-brown);
+  margin-bottom: 30px;
+  font-size: 32px;
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.core-values h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-dark-red);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.value-item {
+  background-color: var(--primary-light-brown);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.motto {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  color: var(--primary-dark-red);
+  margin: 50px 0;
+  padding: 20px;
+  position: relative;
+  font-weight: bold;
+}
+
+.motto::before, .motto::after {
+  content: '"';
+  font-size: 40px;
+  color: var(--primary-light-brown);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .VM {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .VM .card {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .school {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .school img {
+    margin-bottom: 15px;
+  }
+  
+  .school .info {
+    margin-left: 0;
+  }
+  
+  .banner .text {
+    font-size: 30px;
+  }
+  
+  .VM .card h1, .core-values h1 {
+    font-size: 28px;
+  }
+  
+  .motto {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner .text {
+    font-size: 24px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
