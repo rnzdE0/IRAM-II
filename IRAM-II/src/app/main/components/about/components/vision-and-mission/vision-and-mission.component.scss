@@ -8,6 +8,7 @@
   --card-border-radius: 15px;
 }
 
+
 /* School header styling */
 .school {
   display: flex;
@@ -132,11 +133,11 @@
 }
 
 .VM .card p {
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.6;
   color: var(--text-color);
   padding: 0 20px;
-  text-align: left;
+  text-align: center;
 }
 
 /* Core Values styling */
