@@ -111,12 +111,12 @@
     padding: 40px 0 20px;
     font-family: 'Arial', sans-serif;
     color: #333;
-  
+
     .dots {
       font-size: 55px;
       color: var(--neutral-white);
     }
-  
+
     .footer-container {
       max-width: 1600px;
       margin: 0 auto;
@@ -126,17 +126,17 @@
       padding: 0 20px;
       gap: 60px;
     }
-  
+
     .footer-section {
       min-width: 200px;
       margin-bottom: 30px;
       text-align: center;
-  
+
       &.school-info {
         width: none;
       }
     }
-  
+
     .footer-title,
     .footer-subtitle {
       font-size: 24px;
@@ -144,31 +144,31 @@
       color: var(--neutral-white);
       font-weight: 600;
     }
-  
+
     .footer-description {
       color: var(--neutral-grey);
       line-height: 1.5;
       font-size: 15px;
       font-weight: 400;
     }
-  
+
     .footer-links,
     .footer-contacts {
       list-style: none;
       padding: 0;
       margin: 0;
-  
+
       li {
         margin-bottom: 8px;
         font-size: 16px;
         color: var(--neutral-grey);
         font-weight: 400;
-  
+
         a {
           color: var(--neutral-grey);
           text-decoration: none;
           transition: color 0.3s;
-  
+
           &:hover {
             color: var(--primary-light-green);
           }
@@ -181,7 +181,7 @@
               width: 100%;
               margin: 20px auto 0;
               padding: 20px 20px 0;
-              text-align: center;      
+              text-align: center;
               color: var(--neutral-grey);
               font-size: 14px;
               font-weight: 400;
@@ -199,4 +199,4 @@
           width: 100% !important;
         }
       }
-    
+
