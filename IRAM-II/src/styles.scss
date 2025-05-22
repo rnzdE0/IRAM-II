@@ -20,6 +20,8 @@
     --neutral-grey: #7F8C8D;
     --neutral-light-one: #ECF0F1;
     --neutral-white: #FFFFFF;
+
+    --card-border-radius: 15px;
 }
 
 * {
@@ -31,15 +33,15 @@
     font-family: "Montserrat", sans-serif;
 }
 
-body { 
-    margin: 0; 
+body {
+    margin: 0;
     background-color: var(--accent-light-biege);
     }
 
 
 
-html, body { 
-    height: 100%; 
+html, body {
+    height: 100%;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
