@@ -134,22 +134,30 @@
   background-color: #8a0030;
 }
 
-.search-button {
-  background-color: #5f1a22; /* Maroon */
-  width: 350px;
-  height: 30px;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  justify-self: left;
-   margin-left: 1300px;
-   margin-top: 100px;
+.search-bar {
+  display: flex;
+  background-color: #5f1a22;
+  border-radius: 30px;
+  justify-self: end;
+  margin-right: 100px;
+  margin-top: 50px;
+  padding-left: 40px;
 }
 
-.search-bar{
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px 100px 0 100px; /* aligns with card padding */
+.search-bar input{
+background-color: #5f1a22;
+color: #f4f0eb;
+font-family: "Poppins";
+font-weight: bold;
+font-size: 18px;
+border-radius: 20px;
+width: 400px;
+height: 30px;
+border-style: none;
+outline: none;
+}
+
+input::placeholder{
+  color: white;
+  border-style: none;
 }
