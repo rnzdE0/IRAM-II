@@ -6,9 +6,8 @@ import { FooterComponent } from "./footer/footer.component";
   selector: 'app-root',
   imports: [RouterOutlet, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'IRAM-II';
-  tite = 'iram-admin-login';
 }

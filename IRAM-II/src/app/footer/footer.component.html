@@ -8,12 +8,21 @@
     <textarea placeholder="Write your message here..." name="message" [(ngModel)]="form.message" required></textarea>
     <button type="submit" [disabled]="!emailForm.form.valid">Send</button>
   </form> -->
-    <form class="contact-form">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <input type="text" placeholder="Subject">
-      <textarea placeholder="Write your message here..."></textarea>
-      <button type="submit">Send</button>
+    <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-messages" *ngIf="successMessage || errorMessage">
+        <div class="success-message" *ngIf="successMessage">{{successMessage}}</div>
+        <div class="error-message" *ngIf="errorMessage">{{errorMessage}}</div>
+      </div>
+      
+      <input type="text" formControlName="name" placeholder="Name" required>
+      <input type="email" formControlName="email" placeholder="Email" required>
+      <input type="text" formControlName="title" placeholder="Subject" required>
+      <textarea formControlName="message" placeholder="Write your message here..." required></textarea>
+      
+      <button type="submit" [disabled]="!contactForm.valid || isLoading">
+        <span *ngIf="!isLoading">Send</span>
+        <span *ngIf="isLoading">Sending...</span>
+      </button>
     </form>
 
     <div class="contact-info">

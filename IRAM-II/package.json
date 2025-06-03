@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "emailjs-com": "^3.2.0",
     "g": "^2.0.1",
     "jquery": "^3.7.1",
     "ngx-slick-carousel": "^19.0.0",
