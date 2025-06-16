@@ -17,7 +17,6 @@ export const routes: Routes = [
           { path: 'history', loadComponent: () => import('./main/components/about/components/history/history.component').then(m => m.HistoryComponent) },
         
         { path: 'vision-and-mission', loadComponent: () => import('./main/components/about/components/vision-and-mission/vision-and-mission.component').then(m => m.VisionAndMissionComponent) },
-        { path: 'vision-and-mission', loadComponent: () => import('./main/components/about/components/vision-and-mission/vision-and-mission.component').then(m => m.VisionAndMissionComponent) },
         { path: 'academic-program', loadComponent: () => import('./main/components/about/components/academic-program/academic-program.component').then(m => m.AcademicProgramComponent) },
         { path: 'organizational-chart', loadComponent: () => import('./main/components/about/components/organizational-chart/organizational-chart.component').then(m => m.OrganizationalChartComponent) }
         ]

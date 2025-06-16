@@ -1,0 +1,46 @@
+<div class="school">
+  <img src="assets/IramLogo.png" alt="Iram II Elementary School Logo" />
+  <div class="info">
+    <p>Iram II Elementary School</p>
+    <p>Department of Education - Region III</p>
+    <h1>School Division Office Of Olongapo City</h1>
+  </div>  
+</div>
+
+<div class="banner">
+  <div class="image-container">
+    <img src="assets/banner.png" alt="School Banner Image" />
+    <div class="overlay"></div>
+    <div class="text">Vision, Mission & Core Values</div>
+  </div>
+</div>
+
+<div class="VM-container">
+  <div class="VM">
+    <div class="card">
+      <h1>Vision</h1>
+      <p *ngIf="visionContent; else loadingVision">{{ visionContent }}</p>
+      <ng-template #loadingVision><p>Loading Vision...</p></ng-template>
+    </div>
+
+    <div class="card">
+      <h1>Mission</h1>
+      <p *ngIf="missionContent; else loadingMission">{{ missionContent }}</p>
+      <ng-template #loadingMission><p>Loading Mission...</p></ng-template>
+    </div>
+  </div>
+</div>
+
+<div class="core-values-container">
+  <div class="core-values">
+    <h1>Core Values</h1>
+    <div *ngIf="coreValuesContent; else loadingValues">
+      <p>{{ coreValuesContent }}</p>
+    </div>
+    <ng-template #loadingValues><p>Loading Core Values...</p></ng-template>
+  </div>
+</div>
+
+<div class="motto">
+  "Nurturing Indigenous Pride, Cultivating Excellence and Shaping Character"
+</div>
