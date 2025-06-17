@@ -178,3 +178,13 @@ body {
     font-size: 13px;
   }
 }
+
+// for zoom
+
+// 125%
+@media (max-width: 96rem) {
+  .header-right {
+    margin-top: -3%;
+  }
+}
+

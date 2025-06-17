@@ -314,3 +314,37 @@
   color: var(--secondary-dark-brown);
   font-weight: bold;
 }
+
+// for zoom
+
+// 100%
+@media (max-width: 120rem) {
+  
+}
+
+// 110%
+@media (max-width: 109.09rem) {
+  .contents {
+    margin-top: 2%;
+  }
+
+  .radio {
+    margin-top: 2%;
+  }
+}
+
+// 125%
+@media (max-width: 96rem) {
+  .contents {
+    margin-top: 6%;
+  }
+
+  .radio {
+    margin-top: 6%;
+  }
+}
+
+// 150%
+@media (max-width: 80rem) {
+
+}
